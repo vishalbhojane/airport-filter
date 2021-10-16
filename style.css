@@ -1,0 +1,250 @@
+@font-face {
+    font-family: m7;
+    src: url(./fonts/M-Ying-Hei-PRC-W48-W7.otf);
+}
+
+@font-face {
+    font-family: m5;
+    src: url(./fonts/M-Ying-Hei-PRC-W48-W5.otf);
+}
+
+@font-face {
+    font-family: m4;
+    src: url(./fonts/M-Ying-Hei-PRC-W48-W4.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: m7, sans-serif;
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    padding: 30px;
+    width: 100%;
+    border: 10px solid #F4F4F4;
+    overflow: hidden;
+}
+
+.header {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.title span {
+    color: #E0E0E0;
+}
+
+.input-group {
+    margin-right: 10px;
+}
+
+.check-box-wrapper {
+    display: flex;
+}
+
+.check-box-wrapper label {
+    font-family: m4, sans-serif;
+    display: inline;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.custom-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    transform: translateY(-50%);
+}
+
+/* When the checkbox is checked */
+.input-group input:checked ~ .checkmark {
+    background-color: #000000;
+}
+
+.input-group input:checked ~ .checkmark:after {
+    color: #fff;
+}
+
+/* Checkmark (hidden when not checked) */
+.checkmark:after {
+    content: '\2714';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 10px;
+    transform: translate(-50%, -50%);
+    bottom: -9px;
+}
+
+/* Styling checkmark/indicator */
+.input-group .checkmark:after {
+    color: #ccc;
+}
+
+.title-2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    max-width: 100%;
+    padding: 5px 0;
+    border: none;
+    border-bottom: 2px solid #000;
+    width: 250px;
+}
+
+#search-input:focus {
+    outline: none;
+}
+
+table {
+    caption-side: bottom;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table th, table td {
+    padding: 20px 15px;
+    text-align: left;
+}
+
+thead th {
+    background: #E7E7E7;
+    font-family: m5, sans-serif;
+}
+
+table td {
+    font-family: m4, sans-serif;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #F4F4F4;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+nav a {
+    color: black;
+}
+
+a i{
+    font-size: 2rem;
+}
+
+.pagination-info {
+    font-family: m4, sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+    html {
+        height: auto;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .fa-th-large {
+        display: none;
+    }
+
+    #filters {
+        flex-direction: column;
+    }
+
+    .check-box-container {
+        margin-bottom: 20px;
+    }
+
+    .check-box-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .check-box-wrapper .input-group {
+        width: 50%;
+        margin: 10px 0;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    a i{
+        font-size: 1.5rem;
+    }
+
+    .pagination-info {
+        font-size: 12px;
+    }
+}

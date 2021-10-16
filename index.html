@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Airport Filter</title>
+    <script defer src="./app.js"></script>
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Filter <span>airports</span></h1>
+            <i class="fas fa-th-large"></i>
+        </div>
+        <form id="filters">
+            <div class="check-box-container">
+                <h2 class="title-2">Type</h2>
+                <div class="check-box-wrapper">
+                    <label class="input-group">
+                        Small
+                        <input class="custom-checkbox" id="small" name="type" type="checkbox" value="small" />
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="input-group">
+                        Medium
+                        <input class="custom-checkbox" id="medium" name="type" type="checkbox" value="medium" />
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="input-group">
+                        Large
+                        <input class="custom-checkbox" id="large" name="type" type="checkbox" value="large" />
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="input-group">
+                        Heliport
+                        <input class="custom-checkbox" id="heliport" name="type" type="checkbox" value="heliport" />
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="input-group">
+                        Closed
+                        <input class="custom-checkbox" id="closed" name="type" type="checkbox" value="closed" />
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="input-group">
+                        In Your Favorites
+                        <input class="custom-checkbox" id="in-your-favorite" name="type" type="checkbox"
+                            value="in-your-favorite" />
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div>
+                <h2 class="title-2">Filter by search</h2>
+                <input id="search-input" name="search-input" placeholder="Type here to search..." type="text" />
+            </div>
+        </form>
+        <div class="table-responsive">
+            <table id="table">
+                <thead class="table-heading">
+                    <tr>
+                        <th>Name</th>
+                        <th>ICAO</th>
+                        <th>IATA</th>
+                        <th>Elve.</th>
+                        <th>Lat.</th>
+                        <th>Long.</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody id="table-data"></tbody>
+            </table>
+        </div>
+        <nav>
+            <a href="#" id="btn-prev"> <i class="fas fa-arrow-left"></i></a>
+            <p class="pagination-info">Showing <b>5-8</b> of <b>10,382</b> results</p>
+            <a href="#" id="btn-next"><i class="fas fa-arrow-right"></i></a>
+        </nav>
+    </div>
+</body>
+
+</html>
