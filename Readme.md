@@ -1,7 +1,3 @@
-# Project Name
-> Filter Airports
-> Live demo https://airports-filterr.netlify.app
-
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
